@@ -25,23 +25,43 @@
 // const passwordCorect = isPasswordCorect ? 'correct' : 'INcorrect';
 // console.log(`Password ${passwordCorect}`);
 
-// let userNumber = null;
+let userNumber = null;
 
-// const limit = 3;
-// let correntTry = 1;
-// let isNumberCorect = false;
+const limit = 3;
+// let correntTry = 0;
+let checkNumber = false;
 // debugger;
 // do {
 //     userNumber = prompt('Input number > 15, < 35, % 6').trim();
-//     const NUMBER =  userNumber === '' || userNumber > 15 || userNumber < 35 || userNumber % 6 === 0;
-//     isNumberCorect = userNumber === NUMBER;
-// } while ( !isNumberCorect && correntTry++ < limit);
+//     checkNumber =  userNumber !== '' && userNumber > 15 && userNumber < 35 && userNumber % 6 === 0;
+// } while (!checkNumber && correntTry++ < limit);
 
-// if (isNumberCorect) {
-//     console.log(userNumber);
-// } else {
-//     console.log('Number INcorrect');
-// }
+// while (true) {
+//     userNumber = prompt('Input number > 15, < 35, % 6').trim();
+//     checkNumber =  userNumber !== '' && userNumber > 15 && userNumber < 35 && userNumber % 6 === 0;
+
+//     if (checkNumber || ++correntTry >= limit) {
+//         break;
+//     }
+// };
+
+for (let i = 0; i < limit; i++) {
+    userNumber = prompt('Input number > 15, < 35, % 6');
+    checkNumber =  userNumber !== '' && Number(userNumber) > 15 && Number(userNumber) < 35 && Number(userNumber) % 6 === 0;
+
+    if (checkNumber) {
+        break;
+    }
+}
+
+if (checkNumber) {
+    console.log(userNumber);
+} else {
+    console.log('Number INcorrect');
+}
+
+
+
 
 
 
@@ -103,48 +123,48 @@
 
 
 
-while (true) {
-    const userAge = Number(prompt('Ваш вік:'));
+// while (true) {
+//     const userAge = Number(prompt('Ваш вік:'));
 
-    if (userAge <= 2) {
-        console.log('baby');
-        break;
-    } else if (userAge > 2 && userAge <= 6) {
-        console.log('kinder');
-        break;
-    } else if (userAge > 6 && userAge <= 12) {
-        console.log('child');
-        break;
-    } else if (userAge > 12 && userAge <= 18) {
-        console.log('teenager');
-        break;
-    } else if (userAge > 18 && userAge <= 65) {
-        console.log('adult');
-        break;
-    } else if (userAge > 65 && userAge <= 100) {
-        console.log('oldmen');
-        break;
-    } else if (userAge > 100 && userAge <= 150) {
-        console.log('super!');
-        break;
-    } else {
-        console.log('404 try again');
-    }
-}
+//     if (userAge <= 2) {
+//         console.log('baby');
+//         break;
+//     } else if (userAge > 2 && userAge <= 6) {
+//         console.log('kinder');
+//         break;
+//     } else if (userAge > 6 && userAge <= 12) {
+//         console.log('child');
+//         break;
+//     } else if (userAge > 12 && userAge <= 18) {
+//         console.log('teenager');
+//         break;
+//     } else if (userAge > 18 && userAge <= 65) {
+//         console.log('adult');
+//         break;
+//     } else if (userAge > 65 && userAge <= 100) {
+//         console.log('oldmen');
+//         break;
+//     } else if (userAge > 100 && userAge <= 150) {
+//         console.log('super!');
+//         break;
+//     } else {
+//         console.log('404 try again');
+//     }
+// }
 
 
 // 5) Написати скрипт, який виводить числа (числа повинні бути парними і кратними 9) з діапазону від 0 до 100 у зворотньому порядку.
 // Оберіть самі потрібну конструкцію
 
-let minCout = 0;
-let maxCout = 100;
+// let minCout = 0;
+// let maxCout = 100;
 
-while (minCout <= maxCout) {
-    if (maxCout % 9 === 0) {
-        console.log(maxCout);
-    }
-    maxCout -=2;
-}
+// while (minCout <= maxCout) {
+//     if (maxCout % 9 === 0) {
+//         console.log(maxCout);
+//     }
+//     maxCout -=2;
+// }
 
 
 // 6) За допомогою цикла написати скрипт, який рахує ступень цілого числа.
