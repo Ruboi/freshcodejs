@@ -90,13 +90,15 @@ if (numberType > 0) {
 const num11 = 5;
 const num22 = 10;
 
+let result = null;
+
 if (num11 >= num22) {
-    const result = num11 - num22;
-    console.log(result)
+    result = num11 - num22;
 } else {
-    const result = num11 * num22;
-    console.log(result)
+    result = num11 * num22;
 }
+
+console.log(result)
 
 // 8) Є дві змінні. Вивести "yes", якщо змінні мають однаковий тип, в іншому випадку "no".
 
