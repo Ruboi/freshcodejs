@@ -25,11 +25,11 @@
 // const passwordCorect = isPasswordCorect ? 'correct' : 'INcorrect';
 // console.log(`Password ${passwordCorect}`);
 
-let userNumber = null;
+// let userNumber = null;
 
-const limit = 3;
-// let correntTry = 0;
-let checkNumber = false;
+// const limit = 3;
+// // let correntTry = 0;
+// let checkNumber = false;
 // debugger;
 // do {
 //     userNumber = prompt('Input number > 15, < 35, % 6').trim();
@@ -45,24 +45,20 @@ let checkNumber = false;
 //     }
 // };
 
-for (let i = 0; i < limit; i++) {
-    userNumber = prompt('Input number > 15, < 35, % 6');
-    checkNumber =  userNumber !== '' && Number(userNumber) > 15 && Number(userNumber) < 35 && Number(userNumber) % 6 === 0;
+// for (let i = 0; i < limit; i++) {
+//     userNumber = prompt('Input number > 15, < 35, % 6');
+//     checkNumber =  userNumber !== '' && Number(userNumber) > 15 && Number(userNumber) < 35 && Number(userNumber) % 6 === 0;
 
-    if (checkNumber) {
-        break;
-    }
-}
+//     if (checkNumber) {
+//         break;
+//     }
+// }
 
-if (checkNumber) {
-    console.log(userNumber);
-} else {
-    console.log('Number INcorrect');
-}
-
-
-
-
+// if (checkNumber) {
+//     console.log(userNumber);
+// } else {
+//     console.log('Number INcorrect');
+// }
 
 
 
@@ -92,9 +88,10 @@ if (checkNumber) {
 // }
 
 // while (true) {
-//     let inputNumber = prompt('Введіть число'); 
+//     let inputNumber = prompt('Введіть число');
+//     attemptCunter++;
 
-//     if (isNaN(inputNumber)) {
+//     if (isNaN(inputNumber) || inputNumber === null) {
 //         alert('Помилка ввода!');
 //     } else if (inputNumber < givenNumber) {
 //         alert('Замале число!')
@@ -105,7 +102,6 @@ if (checkNumber) {
 //         alert('Вітаю вгадали число за ' + attemptCunter + ' спроби. Це число: ' + givenNumber);
 //         break;
 //     }
-//     attemptCunter++;
 // }
 
 
@@ -124,27 +120,33 @@ if (checkNumber) {
 
 
 // while (true) {
-//     const userAge = Number(prompt('Ваш вік:'));
+//     const userAge = prompt('Ваш вік:');
+//     let checkAgeError = userAge === '' || userAge === null || userAge === Number.isNaN(Number(userAge)) || Number(userAge) < 0;
+
+//     if (checkAgeError) {
+//         console.log('404 try again');
+//         continue;
+//     }
 
 //     if (userAge <= 2) {
 //         console.log('baby');
 //         break;
-//     } else if (userAge > 2 && userAge <= 6) {
+//     } else if (userAge <= 6) {
 //         console.log('kinder');
 //         break;
-//     } else if (userAge > 6 && userAge <= 12) {
+//     } else if (serAge <= 12) {
 //         console.log('child');
 //         break;
-//     } else if (userAge > 12 && userAge <= 18) {
+//     } else if (userAge <= 18) {
 //         console.log('teenager');
 //         break;
-//     } else if (userAge > 18 && userAge <= 65) {
+//     } else if (userAge <= 65) {
 //         console.log('adult');
 //         break;
-//     } else if (userAge > 65 && userAge <= 100) {
+//     } else if (userAge <= 100) {
 //         console.log('oldmen');
 //         break;
-//     } else if (userAge > 100 && userAge <= 150) {
+//     } else if (userAge <= 150) {
 //         console.log('super!');
 //         break;
 //     } else {
@@ -156,19 +158,31 @@ if (checkNumber) {
 // 5) Написати скрипт, який виводить числа (числа повинні бути парними і кратними 9) з діапазону від 0 до 100 у зворотньому порядку.
 // Оберіть самі потрібну конструкцію
 
-// let minCout = 0;
-// let maxCout = 100;
+// const minCout = 0;
+// let maxCout = 99;
 
 // while (minCout <= maxCout) {
-//     if (maxCout % 9 === 0) {
+//     if (maxCout % 2 === 0 && maxCout % 9 === 0) {
 //         console.log(maxCout);
 //     }
-//     maxCout -=2;
+//     maxCout--;
 // }
 
 
 // 6) За допомогою цикла написати скрипт, який рахує ступень цілого числа.
 // Врахувати, що ступень може бути позитивним, нулем, негативним.
 // Не забути про результат який можна отримати безпечно! тобто для перебільшення безпечного цілого продумати що можна використати, щоб отримати коректне значення.
+
+const power = -2;
+const number = 5;
+let result = 1;
+
+for (let i = 0; i < Math.abs(power); i++) {
+    result *= number;
+}
+
+power >= 0 ? console.log(result) : console.log(1 / result);
+
+
 
 
