@@ -16,7 +16,7 @@
 //     return inNumber % 2 === 0 ? "Odd" : "Even";
 // }
 
-// const userNumber = prompt('Ведіть число:');
+// const userNumber = `prompt('Ведіть число:')`;
 
 // console.log(odd_event(userNumber));
 
@@ -148,7 +148,7 @@ function currencyConverter(amount, course = 36, direction = true) {
     let result = amount * course + "₴";
 
     if (!direction) {
-        result = course * amount + "$";
+        result = course / amount + "$";
     }
 
     return result;
