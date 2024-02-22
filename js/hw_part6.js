@@ -66,34 +66,59 @@ console.log('factorial >>', fact(5n));
 // //pairBrickets(-4) => '()'
 // //pairBrickets('qwe') => throw
 
-function pairBrickets(n) {
+// function pairBrickets(n) {
+//     try {
+//         if (typeof n !== 'number') {
+//             throw new Error('n must be number value')
+//         }
+
+
+//         if (n <= 0) {
+//             return '()';
+//         }
+
+//         const openBricket = '(';
+//         const clodeBricket = ')';
+
+//         let result = [];
+
+//         for (let i = 0; i < n; i++) {
+//             result.unshift(openBricket);
+//             result.push(clodeBricket);
+//         }
+
+
+
+//         return result.join('');
+
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+// console.log('pair brickets >>', pairBrickets(2));
+
+function pairBricketsRecursive(n) {
     try {
-        if (typeof n !== 'number') {
-            throw new Error('n must be number value')
-        }
+      if (typeof n !== 'number') {
+        throw new TypeError('n must be a number value');
+      }
+    
+      const addBrackets = count => (count <= 1) ? '()' : `(${addBrackets(count - 1)})`;
+      
+      return addBrackets(n);
 
-
-        if (n <= 0) {
-            return '()';
-        }
-
-        const openBricket = '(';
-        const clodeBricket = ')';
-
-        let result = [];
-
-        for (let i = 0; i < n; i++) {
-            result.unshift(openBricket);
-            result.push(clodeBricket);
-        }
-
-        return result.join('');
-
+    //   function addBrackets(count) {
+    //     if (count <= 1) {
+    //       return '()';
+    //     }
+    //     return '(' + addBrackets(count - 1) + ')';
+    //   }
     } catch (error) {
-        console.log(error);
+      console.log(error);
     }
-}
-console.log('pair brickets >>', pairBrickets(2));
+  }
+  
+  console.log('pair brackets recursive >>', pairBricketsRecursive(2));
 
 
 // 4) Написати рекурсивну функцію, яка приймає два числа і повертає найбільший спільний дільник цих двох чисел
