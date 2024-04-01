@@ -1,0 +1,154 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+.flex-wrapper {
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.flex-title {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.flex-buttons {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.flex-button {
+    font-weight: 600;
+    margin-right: 10px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 0;
+    border: 2px solid #4ec3f6;
+    background: #fff;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.flex-button.is-active,
+.flex-button:hover {
+    background: #4ec3f6;
+    color: #fff;
+}
+
+.flex-button:last-child {
+    margin: 0;
+}
+
+.flex-content {
+    border: 2px solid #4ec3f6;
+    height: 200px;
+    padding: 8px;
+    display: flex;
+}
+
+.flex-content.row {
+    flex-direction: row;
+}
+
+.flex-content.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-content.column {
+    flex-direction: column;
+}
+
+.flex-content.column-reverse {
+    flex-direction: column-reverse;
+}
+
+.flex-content--item {
+    background-color: #98dffb;
+    padding: 10px;
+    margin: 2px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #0c76a3;
+    display: flex;
+    align-items: center;
+}
+
+
+/***TODO list***/
+.todo-wrapper {
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.todo-title {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.todo-list-caption {
+    border-bottom: 2px solid #4ec3f6;
+    display: flex;
+    color: #044966;
+    padding: 5px 10px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.todo-list-caption--title {
+    width: 45%;
+}
+
+.todo-list-caption--woker {
+    width: 35%;
+}
+
+.todo-list-caption--status {
+    width: 20%;
+}
+
+.todo-item {
+    border: 1px solid #4ec3f6;
+    border-radius: 10px;
+    display: flex;
+    color: #044966;
+    padding: 10px;
+    justify-content: space-between;
+    margin: 5px 0;
+    cursor: pointer;
+    background: #4ec3f6;
+    color: #fff;
+    transition: all .3s ease-in-out;
+}
+
+.todo-item:hover {
+    opacity: 0.8;
+}
+
+.todo-item.done {
+    background-color: #32CD32;
+    border-color: #32CD32;
+}
+
+.todo-item--title {
+    width: 45%;
+}
+
+.todo-item--woker {
+    width: 35%;
+}
+
+.todo-item--status {
+    width: 20%;
+    color: #FF0000;
+}
+
+.todo-item.done .todo-item--status  {
+    color: #fff;
+}
